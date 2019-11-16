@@ -1,4 +1,4 @@
-module github.com/onsi/gomega
+module github.com/ansd/gomega
 
 require (
 	github.com/fsnotify/fsnotify v1.4.7 // indirect

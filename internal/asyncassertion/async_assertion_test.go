@@ -4,11 +4,11 @@ import (
 	"errors"
 	"time"
 
-	"github.com/onsi/gomega/internal/testingtsupport"
+	"github.com/ansd/gomega/internal/testingtsupport"
 
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
-	"github.com/onsi/gomega/internal/asyncassertion"
+	"github.com/ansd/gomega/internal/asyncassertion"
 	"github.com/onsi/gomega/types"
 )
 

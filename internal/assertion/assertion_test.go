@@ -3,12 +3,12 @@ package assertion_test
 import (
 	"errors"
 
-	"github.com/onsi/gomega/internal/testingtsupport"
+	"github.com/ansd/gomega/internal/testingtsupport"
 
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
-	"github.com/onsi/gomega/internal/assertion"
-	"github.com/onsi/gomega/internal/fakematcher"
+	"github.com/ansd/gomega/internal/assertion"
+	"github.com/ansd/gomega/internal/fakematcher"
 	"github.com/onsi/gomega/types"
 )
 

@@ -8,7 +8,7 @@ import (
 	"reflect"
 	"time"
 
-	"github.com/onsi/gomega/internal/oraclematcher"
+	"github.com/ansd/gomega/internal/oraclematcher"
 	"github.com/onsi/gomega/types"
 )
 

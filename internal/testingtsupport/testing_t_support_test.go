@@ -4,7 +4,7 @@ import (
 	"regexp"
 	"time"
 
-	"github.com/onsi/gomega/internal/testingtsupport"
+	"github.com/ansd/gomega/internal/testingtsupport"
 
 	. "github.com/onsi/gomega"
 

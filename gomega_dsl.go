@@ -18,9 +18,9 @@ import (
 	"reflect"
 	"time"
 
-	"github.com/onsi/gomega/internal/assertion"
-	"github.com/onsi/gomega/internal/asyncassertion"
-	"github.com/onsi/gomega/internal/testingtsupport"
+	"github.com/ansd/gomega/internal/assertion"
+	"github.com/ansd/gomega/internal/asyncassertion"
+	"github.com/ansd/gomega/internal/testingtsupport"
 	"github.com/onsi/gomega/types"
 )
 

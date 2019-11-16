@@ -1,7 +1,7 @@
 package matchers
 
 import (
-	"github.com/onsi/gomega/internal/oraclematcher"
+	"github.com/ansd/gomega/internal/oraclematcher"
 	"github.com/onsi/gomega/types"
 )
 
