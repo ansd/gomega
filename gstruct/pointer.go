@@ -27,6 +27,10 @@ type PointerMatcher struct {
 	failure string
 }
 
+func (m *PointerMatcher) String() string {
+	return fmt.Sprintf("%s\n%s\n", format.Object(m.Matcher, 2), m.failure)
+}
+
 func (m *PointerMatcher) Match(actual interface{}) (bool, error) {
 	val := reflect.ValueOf(actual)
 

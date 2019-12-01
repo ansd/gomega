@@ -77,7 +77,7 @@ type FieldsMatcher struct {
 	IgnoreMissing bool
 
 	// State.
-	failures []error
+	Failures []error
 }
 
 // Field name to matcher.
@@ -88,8 +88,8 @@ func (m *FieldsMatcher) Match(actual interface{}) (success bool, err error) {
 		return false, fmt.Errorf("%v is type %T, expected struct", actual, actual)
 	}
 
-	m.failures = m.matchFields(actual)
-	if len(m.failures) > 0 {
+	m.Failures = m.matchFields(actual)
+	if len(m.Failures) > 0 {
 		return false, nil
 	}
 	return true, nil
@@ -148,9 +148,9 @@ func (m *FieldsMatcher) matchFields(actual interface{}) (errs []error) {
 }
 
 func (m *FieldsMatcher) FailureMessage(actual interface{}) (message string) {
-	failures := make([]string, len(m.failures))
-	for i := range m.failures {
-		failures[i] = m.failures[i].Error()
+	failures := make([]string, len(m.Failures))
+	for i := range m.Failures {
+		failures[i] = m.Failures[i].Error()
 	}
 	return format.Message(reflect.TypeOf(actual).Name(),
 		fmt.Sprintf("to match fields: {\n%v\n}\n", strings.Join(failures, "\n")))
@@ -158,8 +158,4 @@ func (m *FieldsMatcher) FailureMessage(actual interface{}) (message string) {
 
 func (m *FieldsMatcher) NegatedFailureMessage(actual interface{}) (message string) {
 	return format.Message(actual, "not to match fields")
-}
-
-func (m *FieldsMatcher) Failures() []error {
-	return m.failures
 }
